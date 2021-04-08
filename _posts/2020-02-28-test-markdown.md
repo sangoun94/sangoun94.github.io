@@ -76,3 +76,29 @@ You can add notification, warning and error boxes like this:
 
 {: .box-error}
 **Error:** This is an error box.
+
+
+```java
+  String str;
+  str = "test";
+  System.out.println(str);
+```
+
+```c
+  #include <stdio.h>
+```
+
+```sql
+SELECT * FROM SANGOUN_FOOL
+```
+
+```javascript
+var t;
+t = document.getElementById("fool");
+```
+
+```html
+<div>
+   babo
+</div>
+```
