@@ -2,7 +2,7 @@
 layout: post
 title: MarkDown Grammar
 subtitle: MarkDown Grammar exercise
-cover-img: /assets/img/path.jpg
+cover-img: /assets/img/natural_design.jpg
 thumbnail-img: /assets/img/markdown.jpg
 share-img: /assets/img/path.jpg
 tags: [markdown, exercise]
