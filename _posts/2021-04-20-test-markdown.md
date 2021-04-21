@@ -1,10 +1,9 @@
 ---
 layout: post
-title: [JPA]
+title: JPA 연습 - 1
 subtitle: 영속성 컨텍스트
 gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
-tags: [jpa], [persistance context]
+tags: [jpa, persistance context]
 comments: true
 ---
 
