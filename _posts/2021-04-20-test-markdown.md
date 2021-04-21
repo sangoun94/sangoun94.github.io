@@ -1,104 +1,59 @@
 ---
 layout: post
-title: Sample blog post
-subtitle: Each post also has a subtitle
+title: [JPA]
+subtitle: 영속성 컨텍스트
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
-tags: [test]
+tags: [jpa], [persistance context]
 comments: true
 ---
 
-This is a demo post to show you how to write blog posts with markdown.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](https://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+영속성 컨텍스트 p.c.
 
-**Here is some bold text**
+	- 엔티티를 영구 저장하는 환경 
+	- EntityManager.persist(entity);
+	- 실제로 db에 넣는게 아니라 영속성 컨텍스트에 넣음.
+	- 엔티티 매니저를 통해서 영속성 컨텍스트에 넣어줌
+	- 엔티티 매니저를 생성하면 1:1로 영속성 컨텍스트 공간이 생김
 
-## Here is a secondary heading
+p.c. 생명주기
 
-Here's a useless table:
+	- 비영속 : 객체만 생성한 상태 jpa랑 전혀 관계 없는 상태
+	- 영속 : 객체 생성 후 entityManager로 집어넣으면 영속 상태 em.persist(member)  -> 멤버를 영속성 컨텍스트에 넣어줌. (db에 저장되는게 아니다.) 트렌젝션 commit 시점에서 영속성 컨텍스트에 있는 데이터가 db로 들어가게 된다.
+	- 준영속 : em.detach(member) 영속성 상태에서 분리 시킨다.  	|||||||||||||	em.remove(member) 객체를 상제한 상태
+	- 삭제 	
 
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
+p.c. 이점
 
+	- 1차 캐시
+	- 동일성 보장
+	- 트랜잭션을 지원하는 쓰기 지연
+	- 변경 감지
+	- 지연 로딩
 
-How about a yummy crepe?
+쓰기 지연 sql 저장소
+	
+	- em.persist(memberA) 1차 캐시에(한 트랜잭션) 저장, insert쿼리를 "쓰기 지연 sql 저장소"에 넣어줌
+	- transaction.commit 할 때 "쓰기 지연 sql 저장소"에 있던 쿼리들을 DB로 flush함 -> 그 다음 db commit
+	- 왜 바로 db 안보내주고 트랜젝션 커밋하고 db에 넣어주냐면, persist할 때 날아가면 데이터를 최적화 해줄 수 있는 시간이 없다. (jdbc batch-size 만큼 모아놨다가 보냄)
 
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
+수정(변경 감지) 더티체킹
 
-It can also be centered!
+	- find후 set으로 데이터 바꿔주고 다시 em.persist(member)해주는건 의미없음. 곧, update jpa가 알아서 query문 날려줌.
+	- em.update(member) 의미 없다. 알아서 해준다.
+	- 왜 이런 일이 일어날까? 영속성 컨텍스트 안에 최초(전)로 들어온 엔티티를 스냅샷을 찍어둠 -> update하게 되면 스냅샷과 들어온 entity를 비교함 -> update쿼리를 "쓰기 지연 sql 저장소"에 넣어줌 -> db 적용.
 
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .mx-auto.d-block :}
+플러시
 
-Here's a code chunk:
+	- 영속성 컨텍스트의 변경내용 db에 반영
+	- 발생하게 되면 -> 변경감지 , 수정된 엔티티 쓰기 지연 sql 저장소에 등록, 쓰기 지연 sql 저장소의 쿼리를 db에 전송 (커밋은 적용 플러시는 날려보내기)
+	- 트랜젝션 커밋 이루어지면 자동으로 발생함(em.setFlushMode(FlushModeType.AUTO)) <= 기본
+	- p.c.를 비우는게 아니라 디비와 동기화 시켜준다는 개념
+	- 커밋 직전에만 동기화 지켜주면 됨. DATA TRANSACTION 작업 단위가 중요 ***
 
-~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-~~~
+준영속
 
-And here is the same code with syntax highlighting:
+	- detach 해당 되는 놈만 p.c.에서 분리
+	- clear em에 있는 모든 놈 분리
+	- close em p.c. 닫음
 
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
-
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
-
-## Boxes
-You can add notification, warning and error boxes like this:
-
-### Notification
-
-{: .box-note}
-**Note:** This is a notification box.
-
-### Warning
-
-{: .box-warning}
-**Warning:** This is a warning box.
-
-### Error
-
-{: .box-error}
-**Error:** This is an error box.
-
-
-```java
-  String str;
-  str = "test";
-  System.out.println(str);
-```
-
-```c
-  #include <stdio.h>
-```
-
-```sql
-SELECT * FROM SANGOUN_FOOL
-```
-
-```javascript
-var t;
-t = document.getElementById("fool");
-```
-
-```html
-<div>
-   babo
-</div>
-```
