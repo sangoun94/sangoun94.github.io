@@ -2,13 +2,13 @@
 layout: default
 cover-img: /assets/img/natural_design.jpg
 ---
-<ul class="posts-list">
+<ul>
     {% assign category = page.category | default: page.title %}
     <h4>Posts in {{ category }} ({{ site.categories[category].size }})</h4>
     {% for post in site.categories[category] %}
     <li>
-        <a style="font-size: large" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <span>{{ post.subtitle }}</span>
+        <a style="font-size: x-large" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <span style="font-size: medium">{{ post.subtitle }}</span>
         <small><time>
             {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
         </time></small>
