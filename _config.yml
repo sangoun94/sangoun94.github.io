@@ -56,10 +56,9 @@ avatar: "/img/avatar-icon.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Isaac
+  name: "Isaac"
   email: "hwangsangoun@gmail.com"
   github: "sangoun94"    # eg. daattali
-  linkedin: 동호-김-881556119?trk=hp-identity-name  # eg. daattali
   instagram: "iamsangki"  # eg. daattali
 
 # Select which links to show in the footer
