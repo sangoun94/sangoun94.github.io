@@ -7,7 +7,7 @@ cover-img: /assets/img/natural_design.jpg
     <h4>Posts in {{ category }} ({{ site.categories[category].size }})</h4>
     {% for post in site.categories[category] %}
     <li>
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <a class="post-title" style="font-size: large" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         <span class="post-subtitle">{{ post.subtitle }}</span>
         <small><time>
             {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
