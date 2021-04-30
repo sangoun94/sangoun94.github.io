@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: post
 title: MarkDown Grammar
 subtitle: MarkDown Grammar exercise
 cover-img: /assets/img/natural_design.jpg
