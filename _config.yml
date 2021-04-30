@@ -15,8 +15,9 @@ author: Isaac
 
 navbar-links:
   About Me: "aboutme"
-  Category:
-    - Study: "/category/study"
+  Study:
+    - jpa: "/category/jpa"
+    - markdown: "/category/markdown"
 
 # --- Logo --- #
 
