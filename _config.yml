@@ -143,7 +143,6 @@ footer-link-col: "#404040"
 #  site_id: "9"
 #  uri: "demo.wiki.pro"
 #  opt-out: true
-google_fonts: "Nanum+Gothic:400,700"
 # --- Comments --- #
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
