@@ -8,7 +8,7 @@ cover-img: /assets/img/natural_design.jpg
     {% for post in site.categories[category] %}
     <li>
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <span class="post-subtitle">{{ post.subtitle}}</span>
+        <span class="post-subtitle">{{ post.subTitle }}</span>
         <small><time>
             {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
         </time></small>
