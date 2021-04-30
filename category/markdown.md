@@ -1,5 +1,5 @@
 ---
 layout: category
-title: jpa
+title: markdown
 permalink: /category/markdown
 ---
