@@ -14,10 +14,11 @@ html {
 body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.125rem;
-  color: {{ site.text-col | default: "#404040" }};
+  /*color: {{ site.text-col | default: "#404040" }};*/
+  color: #DDDDDD;
   position: relative;
   /*background-color: {{ site.page-col | default: "#222222" }};*/
-  background-color: #222222;
+  background-color: #404040;
   {% if site.page-img %}
   background-image: url({{ site.page-img | relative_url }});
   background-attachment: fixed;
