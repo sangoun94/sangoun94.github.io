@@ -4,7 +4,7 @@ layout: page
 
 {{ content }}
 
-{% assign posts = paginator.posts | sort:"order" %}
+{% assign posts = paginator.posts | default: site.posts | sort:"order" %}
 
 <div class="posts-list">
   {% for post in posts %}
@@ -45,7 +45,7 @@ layout: page
     </a>
 
     <p class="post-meta">
-      {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+      {% assign date_format = site.date_format | default: "%B %-d, %Y %H : %M : %S"}
       Posted on {{ post.date | date: date_format }}
     </p>
 
