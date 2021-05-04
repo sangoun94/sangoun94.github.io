@@ -15,10 +15,10 @@ body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.125rem;
   /*color: {{ site.text-col | default: "#404040" }};*/
-  color: #DDDDDD;
+  color: #F3F4ED;
   position: relative;
   /*background-color: {{ site.page-col | default: "#222222" }};*/
-  background-color: silver;
+  background-color: #536162;
   {% if site.page-img %}
   background-image: url({{ site.page-img | relative_url }});
   background-attachment: fixed;
