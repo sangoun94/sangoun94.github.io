@@ -812,7 +812,7 @@ table {
 }
 table tr {
   border-top: 1px solid #cccccc;
-  background-color: #536162;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
 }
@@ -882,7 +882,7 @@ pre {
 .highlight tr,
 .highlight td { /* to be removed after fixing table styles */
   border: none;
-  background: none;
+  background: #536162;
   padding: 0;
   margin: 0;
 }
