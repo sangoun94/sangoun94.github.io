@@ -7,7 +7,6 @@ thumbnail-img: /assets/img/markdown.jpg
 share-img: /assets/img/path.jpg
 tags: [markdown, exercise]
 categories: markdown
-order: 1
 ---
 
 github에서 제공되는 blog를 사용해서 자기 개발 일지들을 기록하고자 했다. jekyll 테마도 적용해보고 블로그에 내 글들을 올리기 위해서 여러가지 알아보는 중에 .md파일들을 보게 되었고 MarkDown로... 공부해보자!
