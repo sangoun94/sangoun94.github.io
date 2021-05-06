@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JPA 활용[2] 성능개선 - API개발고급
-subtitle: JPA에서 DTO사용
+subtitle: JPA에서 DTO 바로 조회
 gh-repo: daattali/beautiful-jekyll
 thumbnail-img: /assets/img/jpa.png
 cover-img: /assets/img/natural_design.jpg
@@ -13,11 +13,7 @@ categories: jpa
 ___
 ## 목표
 
-#### 1. 조회용 샘플 데이터 입력 [준비]
 #### 2. 지연 로딩과 조회 성능 최적화 할 수 있다.
-#### 3. 컬렉션 조회 최적화 하는 방법을 알 수 있다.
-#### 4. 페이징과 한계 돌파를 할 수 있다.
-#### 5. OSIV와 성능 최적화에 대해 알아보자.
 ___
 
 <br/>
@@ -161,7 +157,7 @@ inner join
 
 근데 이 DTO를 사용하는 방법이 제일 BEST라고 말할 수 있을까? 또, 언제 사용하는게 좋을까?
 
-많은 사용들이 사용하는 API여서 트래픽이 정말 심할 때 사용하는 것이 옳다. 또한 select 절에서 원하는 컬럼들이 50,100개 이렇게 많아질 때 사용하는 게 좋다.
+많은 사용자들이 접근하는 API여서 트래픽이 정말 심할 때 사용하는 것이 옳다. 또한 select 절에서 원하는 컬럼들이 50,100개 이렇게 많아질 때 사용하는 게 좋다. 재사용성이 거의 없어서 픽스된 API SPEC 에서 장점을 갖는다.
 
 <br/>
 
