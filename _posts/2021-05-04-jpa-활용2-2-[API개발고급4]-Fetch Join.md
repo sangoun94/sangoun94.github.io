@@ -5,7 +5,7 @@ subtitle: Fetch Join
 gh-repo: daattali/beautiful-jekyll
 thumbnail-img: /assets/img/jpa.png
 cover-img: /assets/img/natural_design.jpg
-tags: [jpa, API고급, Fetch Join, DTO]
+tags: [jpa, API고급, Fetch Join, DTO, xToOne]
 comments: true
 categories: jpa
 ---
