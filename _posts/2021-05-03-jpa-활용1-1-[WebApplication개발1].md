@@ -81,4 +81,6 @@ __테이블 설계__
 
 > - 엔티티 설계와 별개의 테이블 설계.
 
-다음 포스터에서는 설계에 맞게 JPA활용해서 Domain을 짜보겠다.
+Domain 구현과 연관관계에 대한 코드들은 github에 올려놓았다.
+
+[Entity Domain](https://github.com/sangoun94/jpashop/tree/main/src/main/java/com/jpabook/jpashop/domain)
