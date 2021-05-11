@@ -5,7 +5,7 @@ subtitle: 요구사항 및 도메인 모델과 테이블 설계.
 gh-repo: daattali/beautiful-jekyll
 thumbnail-img: /assets/img/jpa.png
 cover-img: /assets/img/natural_design.jpg
-tags: [jpa, API기본]
+tags: [jpa, API기본, 도메인 모델]
 comments: true
 categories: jpa
 ---
