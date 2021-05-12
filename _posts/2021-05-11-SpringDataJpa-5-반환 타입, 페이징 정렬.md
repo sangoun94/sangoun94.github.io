@@ -46,7 +46,7 @@ spring data jpa 에서 제공하는 @Query 에 직접
 
 <br/>
 
-Collection 도 @Param 으로 바인딩 가능.
+Collection 도 @Param 으로 바인딩 가능하다.
 
 ~~~java
 @Query("select m from Member m where m.username in :names")
