@@ -43,3 +43,24 @@ _**이텔릭과 두껍게**_
 4. 링크(link)
 <a>https://sangoun94.github.io</a>
 
+5. 박스
+
+### Note
+
+{: .box-note}
+**Note:** This is a notification box.
+
+### Warning
+
+{: .box-warning}
+**Warning:** This is a warning box.
+
+### Error
+
+{: .box-error}
+**Error:** This is an error box.
+
+
+
+
+
