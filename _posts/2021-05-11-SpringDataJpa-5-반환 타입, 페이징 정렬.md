@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Spring Data Jpa
-subtitle: 쿼리 정의 및 param 바인딩
+subtitle: 반환 타입, 페이징 정렬
 gh-repo: daattali/beautiful-jekyll
 thumbnail-img: /assets/img/jpa.png
 cover-img: /assets/img/natural_design.jpg
-tags: [쿼리 정의, spring data jpa]
+tags: [spring data jpa, 반환 타입, 페이징 정렬]
 comments: true
 categories: jpa
 ---
@@ -53,6 +53,18 @@ Collection 도 @Param 으로 바인딩 가능하다.
 List<Member> findByNames(@Param("names") List<String> names);
 ~~~
 
+{: .box-note}
+**Note:** This is a notification box.
+
+### Warning
+
+{: .box-warning}
+**Warning:** This is a warning box.
+
+### Error
+
+{: .box-error}
+**Error:** This is an error box.
 
 
 
