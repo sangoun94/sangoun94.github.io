@@ -3,7 +3,7 @@ layout: post
 title: Spring Data Jpa
 subtitle: 쿼리 정의 및 param 바인딩
 gh-repo: daattali/beautiful-jekyll
-thumbnail-img: /assets/img/jpa.png
+thumbnail-img: /assets/img/jpaExercise2/springdatajpa.jpg
 cover-img: /assets/img/natural_design.jpg
 tags: [쿼리 정의, spring data jpa]
 comments: true

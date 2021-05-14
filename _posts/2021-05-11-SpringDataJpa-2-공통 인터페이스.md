@@ -3,7 +3,7 @@ layout: post
 title: Spring Data Jpa
 subtitle: 공통 인터페이스
 gh-repo: daattali/beautiful-jekyll
-thumbnail-img: /assets/img/jpa.png
+thumbnail-img: /assets/img/jpaExercise2/springdatajpa.jpg
 cover-img: /assets/img/natural_design.jpg
 tags: [CRUD, spring data jpa]
 comments: true

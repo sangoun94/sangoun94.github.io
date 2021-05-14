@@ -3,7 +3,7 @@ layout: post
 title: Spring Data Jpa
 subtitle: 벌크성 수정 및 EntityGraph
 gh-repo: daattali/beautiful-jekyll
-thumbnail-img: /assets/img/jpa.png
+thumbnail-img: /assets/img/jpaExercise2/springdatajpa.jpg
 cover-img: /assets/img/natural_design.jpg
 tags: [spring data jpa, 벌크성 수정, EntityGraph]
 comments: true
