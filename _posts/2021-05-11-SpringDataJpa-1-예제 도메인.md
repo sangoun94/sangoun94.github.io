@@ -3,7 +3,7 @@ layout: post
 title: Spring Data Jpa
 subtitle: 예제 도메인 모델
 gh-repo: daattali/beautiful-jekyll
-thumbnail-img: /assets/img/jpa.png
+thumbnail-img: /assets/img/jpaExercise2/springdatajpa.jpg
 cover-img: /assets/img/natural_design.jpg
 tags: [도메인 모델, spring data jpa]
 comments: true

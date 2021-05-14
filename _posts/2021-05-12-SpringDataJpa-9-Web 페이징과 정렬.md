@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Spring Data Jpa
-subtitle: Auditing
+subtitle: Web 페이징과 정렬
 gh-repo: daattali/beautiful-jekyll
 thumbnail-img: /assets/img/jpa.png
 cover-img: /assets/img/natural_design.jpg
-tags: [spring data jpa, Auditing]
+tags: [spring data jpa, Web 페이징과 정렬]
 comments: true
 categories: jpa
 ---
