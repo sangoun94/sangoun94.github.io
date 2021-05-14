@@ -250,7 +250,7 @@ member1 LastModifiedBy= e3c9324a-d375-4af2-a771-2d49ef2939ff
 
 <br/>
 
-<span style="color:pink">참고
+<span style="color:pink">참고 (저장시점과 수정시점)
 
 ~~~
 memberRepository.save(member);
@@ -300,7 +300,7 @@ public class BaseTimeEntity {
 
 @Getter
 public class BaseEntity extends BaseTimeEntity{
-
+    
     @CreatedBy
     @Column(updatable = false)
     private String createBy;
