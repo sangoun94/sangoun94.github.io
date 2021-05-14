@@ -130,3 +130,67 @@ spring:
         default-page-size: 10
         max-page-size: 2000
 ~~~
+
+<br/>
+
+<em>Dto 맵핑</em>
+
+엔티티를 API로 노출하면 다양한 문제가 발생한다. 그래서 엔티티를 꼭 DTO로 변환해서 반환해야 한다.
+
+Page는 map() 을 지원해서 내부 데이터를 다른 것으로 변경할 수 있다.
+
+~~~java
+@ResponseBody
+@GetMapping("/helloPage")
+public Page<Member> helloPage(@PageableDefault(size = 12, sort = "username", direction = Sort.Direction.DESC) Pageable pageable) {
+
+        Team team = new Team("sangoun94");
+        teamRepository.save(team);
+        Optional<Team> teamOptional = teamRepository.findById(team.getId());
+        Member member = new Member("sangoun", 28,teamOptional.get());
+        memberRepository.save(member);
+
+        Page<Member> pageAll = memberRepository.findAll(pageable);
+        Page<MemberDto> map = pageAll.map(MemberDto::new);
+        return map;
+} 
+~~~
+
+<strong>실행결과</strong>
+
+~~~json
+{
+  "content":[
+    {
+      "id":2,
+      "username":"sangoun",
+      "teamName":"sangoun94"
+    }
+  ],
+  "pageable":{
+    "sort":{
+      "sorted":true,
+      "unsorted":false,
+      "empty":false
+    },
+    "offset":0,
+    "pageNumber":0,
+    "pageSize":12,
+    "unpaged":false,
+    "paged":true
+  },
+  "last":true,
+  "totalElements":1,
+  "totalPages":1,
+  "size":12,
+  "number":0,
+  "sort":{
+    "sorted":true,
+    "unsorted":false,
+    "empty":false
+  },
+  "first":true,
+  "numberOfElements":1,
+  "empty":false
+}
+~~~
