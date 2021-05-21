@@ -4,13 +4,27 @@ title: About me
 subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+제 이름은 황상운입니다. 영어 이름은 Isaac이고요.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+저는 저의 앞날이 무궁무진하게 발전할 사람일거라 생각합니다.
 
-What else do you need?
+훌륭한 개발자들이 그랫듯 기본을 단단하게 다지는 개발자가 될 거다. 
 
-### My story
+- 꾸준하게 배우는 프로그래머
+- 일상생활에 꼭 필요한 서비스 개발하는게 목표다 
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Like it :
+
+- 떡볶이
+- 롤 플레이
+- 운동 후 샤워
+- 다양한 여가생활(낚시, 등산, 독서)
+- 빨래
+
+Hate :
+
+- 음식은 다 좋다.
+- 아침알람소리
+- 너무 계획적인 여행
+- 무시하는 말투
+
