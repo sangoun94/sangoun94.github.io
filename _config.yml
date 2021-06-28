@@ -17,6 +17,7 @@ navbar-links:
   About Me: "aboutme"
   Study:
     - jpa: "/category/jpa"
+    - QueryDSL: "/category/queryDSL"
     - markdown: "/category/markdown"
 
 # --- Logo --- #
